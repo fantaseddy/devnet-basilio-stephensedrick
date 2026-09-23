@@ -27,20 +27,32 @@ Write at least one working example below that you
 came up with yourself — not copied from class.
 """
 
-# --- your code example goes here ---
+def calculate_average(waterintakeday1, waterintakeday2, waterintakeday3):
+    average = (waterintakeday1 + waterintakeday2 + waterintakeday3) / 3
+    return average
 
+my_average = calculate_average(5, 8, 7)
+print(f"My average daily water intake these past 3 days is {my_average:.2f}")
+
+def greet_student(name, subject="DEVNET"):
+    return f"Hi, I'm {name}! And I bring you {subject}."
+
+message = greet_student("Seddy")
+print(message)
+
+message2 = greet_student("Seddy", "VALORANT")
+print(message2)
 
 """
 ============================================
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
-[what's something confusing or easy to get wrong
-about this topic?]
+This is a tricky and confusing topic. I confused a parameter with an argument, but a parameter is the variable written when I define the function, while an argument is the actual value I give the function when I call it.
 
 
 ============================================
 HOW THIS CONNECTS TO SOMETHING ELSE
 ============================================
-[optional]
+Functions connect to the topics I already learned because they can use variables, data types, conditions, loops, and lists inside them.
 """
 
