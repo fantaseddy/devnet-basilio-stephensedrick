@@ -24,20 +24,29 @@ Git is version control, in the sense that it lets us track and save different ve
 
 ## Walking through what I did
 
-[Describe, step by step, a real branch → commit → push → PR you did. Include the actual commands you used.]
+For this activity, I used the template in the given GitHub repository using the link. I renamed it as per the instructions, made it public, and read the README. I made branches for each file inside the folders. I opened Visual Studio Code, updated it, restarted it, and checked my version. Then, I cloned it to my local Visual Studio Code application in my laptop, double checked, and then tested my local connectivity to the remote repository. I make changes to the files, commit those changes, push the branch to GitHub, and then create a pull request.
 
 ```
-# paste your actual commands here
+git --version
+Ctrl + Shift + P
+Git: Clone
+https://github.com/fantaseddy/devnet-basilio-stephensedrick.git
+git pull
+git status
+git add .
+git commit -m "Message"
+git push
 ```
 
 ---
 
 ## A mistake I made (or one I want to avoid)
 
-[What tripped you up? A confusing error message, committing to the wrong branch, a merge conflict — explain it so a classmate reading this avoids the same mistake.]
+Don't be mad, but after cloning I forgot to save using Ctrl + S hahahah XD
+I made changes to the file, then I added, committed, and pushed those files. I was wondering why they're not causing a pull request. It turns out I simply forgot to save the file first after cloning it. D:
 
 ---
 
 ## How this connects to something else
 
-[Optional: how does version control relate to anything else you've learned or used before?]
+We used Git and GitHub for our previous group activities, since we have to use branches then push it on main as we work on different parts of the system without conflicting each other. And that was only for this subject. This is relevant for us as we most definitely will still use this as IT students in the future.
