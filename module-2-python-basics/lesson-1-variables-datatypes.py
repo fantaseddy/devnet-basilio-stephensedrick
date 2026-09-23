@@ -1,7 +1,7 @@
 """
 Module 2 — Lesson 1: Variables & Data Types
-Student: [your name]
-Date: [date]
+Student: Stephen Sedrick C. Basilio
+Date: September 23, 2026
 
 ============================================
 WHAT IS THIS TOPIC? (explain it like you're
