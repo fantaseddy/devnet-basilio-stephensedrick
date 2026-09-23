@@ -31,7 +31,7 @@ Paste the code you already wrote for this activity below.
 import os
 import shutil
 
-source_folder = "files"
+source_folder = "module-2-python-basics/file-sorting"
 folders = { ".jpg": "Images", ".png": "Images", ".txt": "Documents", ".pdf": "Documents", ".docx": "Documents" }
 
 for filename in os.listdir(source_folder):
@@ -50,15 +50,12 @@ print("Files have been sorted.")
 ============================================
 A MISTAKE I MADE (or one I want to avoid)
 ============================================
-[what tripped you up while building this? e.g. a path that didn't
-exist, a file that got overwritten, something that didn't work the
-way you expected at first]
+One mistake I experienced was using a folder path that does not exist. Turns out, the source folder name is wrong, making it so that the program will not be able to find the files.
 
 
 ============================================
 HOW THIS CONNECTS TO SOMETHING ELSE
 ============================================
-[optional: how is this similar to what real automation scripts do?
-think about your own gradebook/attendance workflow — could something
-like this save you time there?]
+This connects to automation because the computer can repeat the same file-organizing task without me manually moving every file.
+In the future, as a secretary right now, I could use a similar idea for schoolwork documents and files by automatically organizing assignments, PDFs, screenshots, or other files into different folders.
 """
