@@ -6,19 +6,20 @@ Date: September 23, 2026
 ============================================
 WHAT DID YOU BUILD? (explain in your own words)
 ============================================
-[Paste your working script below first, then come back and explain
-it here: what does your script do, and what rule did you use to
-sort the files? e.g. by extension, by name, by date, etc.]
+This is similar to the previous activity that our professor assigned to us in the lab before. I built a simple file-sorting script using Python's os and shutil modules. The script checks the files inside a folder and sorts them into different folders based on their file extension. For example, image files such as .jpg and .png are placed in an Images folder, while .txt and .docx files can be placed in a Documents folder. The rule I used to sort the files is their file extension. This makes it easier to organize files automatically instead of moving each file manually.
 
 
 ============================================
 KEY VOCABULARY
 ============================================
-- os module:
-- shutil module:
-- file path:
-- directory:
+- os module: Python module that lets a program work with the operating system, such as checking folders and file names
+- shutil module: Python module used for high-level file operations, including moving and copying files
+- file path: location of a file or folder in the computer
+- directory: folder where files and other folders are stored
 (add more as needed)
+- file sorting: checks files and sorts them into different folders based on their file extension
+- file extension: the part of a file name that usually shows what type of file it is, such as .txt, .jpg, or .pdf
+- automation: using a program to perform a task automatically instead of doing it manually
 
 
 ============================================
@@ -30,7 +31,19 @@ Paste the code you already wrote for this activity below.
 import os
 import shutil
 
-# --- paste your existing code here ---
+source_folder = "files"
+folders = { ".jpg": "Images", ".png": "Images", ".txt": "Documents", ".pdf": "Documents", ".docx": "Documents" }
+
+for filename in os.listdir(source_folder):
+    file_path = os.path.join(source_folder, filename)
+    if os.path.isfile(file_path):
+        extension = os.path.splitext(filename)[1].lower()
+        if extension in folders:
+            destination_folder = os.path.join(source_folder, folders[extension])
+            os.makedirs(destination_folder, exist_ok=True)
+            shutil.move(file_path, os.path.join(destination_folder, filename))
+
+print("Files have been sorted.")
 
 
 """
