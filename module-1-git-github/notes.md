@@ -1,24 +1,24 @@
 # Module 1 — Git & GitHub
 
-**Student:** [your name]
-**Date:** [date]
+**Student:** Stephen Sedrick C. Basilio
+**Date:** September 23, 2026
 
 ---
 
 ## What is Git? What is GitHub? (explain like you're teaching a friend who's never used either)
 
-[Write your own explanation here. What problem does Git actually solve? How is GitHub different from Git itself?]
+Git is version control, in the sense that it lets us track and save different versions of our work. It's basically a tool that tracks our changes of the files in a project. GitHub is the website platform that we have used in this subject to store, create, and access repositories online. We often have them on public and have added group members and instructor as a contributor.
 
 ---
 
 ## Key vocabulary (in your own words)
 
-- repository:
-- commit:
-- branch:
-- push / pull:
-- pull request:
-- merge conflict:
+- repository: project folder tracked by Git
+- commit: messaged checkpoint of changes one made in a project
+- branch: a separate version that doesn't directly change the main branch
+- push / pull: push sends from local commits to remote repo, while pull is the reverse
+- pull request: a review to merge the changes from other branches to main
+- merge conflict: Git cannot emrge changes coz different branches changed the same parts of a file
 
 ---
 
