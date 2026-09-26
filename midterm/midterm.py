@@ -22,7 +22,7 @@ def add_device(device_list):
     name = input("Enter Device Name: ")
     address = input("Enter IP Address: ")
     status = input("Active/Inactive: ")
-    return device(name + " - " + address + " - " + status)
+    return device(name, address, status)
     pass
 
 def view_devices(device_list):
@@ -37,6 +37,11 @@ def count_active_inactive(device_list):
 
 def find_device(device_list):
     # ask for a name, search the list, print result or "not found"
+    for device in devices:
+        if device["name"] == name:
+            return device
+        else:
+            print("Not Found")
     pass
 
 # BONUS (optional)
