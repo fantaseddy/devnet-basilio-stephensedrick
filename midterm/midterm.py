@@ -1,6 +1,6 @@
 """
 Midterm Practical Exam — Network Device Inventory Tool
-Student: [your name]
+Student: Stephen Sedrick C. Basilio
 """
 
 devices = []  # starts empty — the user adds devices as the program runs
