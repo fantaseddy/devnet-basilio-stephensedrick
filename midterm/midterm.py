@@ -7,10 +7,21 @@ devices = []  # starts empty — the user adds devices as the program runs
 
 def display_menu():
     # print the menu, return the user's choice
+    print(f"=== Network Device Inventory ===")
+    print(f"1. Add a device")
+    print(f"2. View all devices")
+    print(f"3. Count active vs inactive devices")
+    print(f"4. Find a device by name")
+    print(f"5. Exit")
+    choice = int(input("Choose an option: "))
+    return choice
     pass
 
 def add_device(device_list):
     # ask for name, IP, status — build the string, add to the list
+    name = input("Enter Device Name: ")
+    address = input("Enter IP Address: ")
+    status = input("Active/Inactive: ")
     pass
 
 def view_devices(device_list):
