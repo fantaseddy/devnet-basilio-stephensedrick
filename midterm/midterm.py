@@ -22,10 +22,12 @@ def add_device(device_list):
     name = input("Enter Device Name: ")
     address = input("Enter IP Address: ")
     status = input("Active/Inactive: ")
+    return device(name + " - " + address + " - " + status)
     pass
 
 def view_devices(device_list):
     # loop through and print every device — handle empty list
+    print(f"{name} - {address} - {status}")
     pass
 
 def count_active_inactive(device_list):
