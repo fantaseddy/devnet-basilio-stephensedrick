@@ -19,15 +19,9 @@ def display_menu():
 
 def add_device(device_list):
     # ask for name, IP, status — build the string, add to the list
-    def device(name):
-        input("Enter Device Name: ")
-        return name
-    def device(address):
-        input("Enter IP Address: ")
-        return address
-    def device(status):
-        input("Active/Inactive: ")
-        return status
+    name = input("Enter Device Name: ")
+    name = input("Enter IP Address: ")
+    name = input("Active/Inactive: ")
     pass
 
 def view_devices(device_list):
