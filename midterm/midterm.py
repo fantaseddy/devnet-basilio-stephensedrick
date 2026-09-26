@@ -27,7 +27,8 @@ def add_device(device_list):
 
 def view_devices(device_list):
     # loop through and print every device — handle empty list
-    print(f"{name} - {address} - {status}")
+    for device in devices:
+        print(f"{name} - {address} - {status}")
     pass
 
 def count_active_inactive(device_list):
