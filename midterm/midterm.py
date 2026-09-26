@@ -13,7 +13,7 @@ def display_menu():
     print(f"3. Count active vs inactive devices")
     print(f"4. Find a device by name")
     print(f"5. Exit")
-    choice = int(input("Choose an option: "))
+    user_choice = int(input("Choose an option: "))
     return choice
     pass
 
@@ -47,5 +47,15 @@ def main():
         choice = display_menu()
         # use if/elif to call the right function based on choice
         # set running = False when the user picks Exit
+        if user_choice == 1:
+            add_device
+        if user_choice == 2:
+            view_devices
+        if user_choice == 3:
+            count_active_inactive
+        if user_choice == 4:
+            find_device
+        if user_choice == 5:
+            set running = False
 
 main()
