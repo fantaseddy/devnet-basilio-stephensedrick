@@ -26,6 +26,10 @@ def get_pokemon_data(pokemon_name):
         name = pokemon.get("name")
         height = pokemon.get("height")
         weight = pokemon.get("weight")
+        abilities = [
+                        entry["ability"]["name"]
+                        for entry in pokemon.get("abilities", [])
+        ]
 
         if name is None or height is None or weight is None:
             print("The API response did not contain all required Pokemon data.")
@@ -35,6 +39,7 @@ def get_pokemon_data(pokemon_name):
             "name": name,
             "height": height,
             "weight": weight,
+            "abilities": abilities,
         }
 
     except requests.exceptions.HTTPError:
@@ -57,10 +62,9 @@ def play_game():
         return
 
     print("\nWho's THAT Pokemon?")
-    print("Guess the Pokemon using its height and weight.")
-    print(f"Height: {pokemon['height']} decimetres")
-    print(f"Weight: {pokemon['weight']} hectograms")
-    print(f"You have {max_attempts} attempts.")
+    print(f"Height: {pokemon['height']}")
+    print(f"Weight: {pokemon['weight']}")
+    print("Abilities: " + ", ".join(pokemon["abilities"]))
 
     attempts = 0
 
@@ -73,7 +77,7 @@ def play_game():
             continue
 
         if guess not in pokemons:
-            print("That name isn't in this game's Pokemon list. Try one of the listed Pokemons.")
+            print("Please choose within the Pokemon list.")
             print("Available choices: " + ", ".join(pokemons))
             continue
 
@@ -87,7 +91,7 @@ def play_game():
         if remaining > 0:
             print(f"That's NOT the Pokemon! Attempts remaining: {remaining}")
 
-    print(f"Sorry, out of attempts! The Pokemon was {pokemon['name'].title()}.")
+    print(f"Sorry! The Pokemon was {pokemon['name'].title()}.")
 
 if __name__ == "__main__":
     play_game()
